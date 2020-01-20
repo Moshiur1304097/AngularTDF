@@ -9,8 +9,19 @@ import { User } from './user'
 export class AppComponent {
  // title = 'TDF';
 topics =['Angular', 'React', 'Vue'];
+topicHasError=true;
 
-userModel = new User('Rob', 'rob@test.com', 1737711756,'','morning',true);
+userModel = new User('', 'rob@test.com', 1737711756,'','morning',true);
+
+validateTopic(value){
+  if(value==='default'){
+    this.topicHasError=true;
+  }
+  else{
+    this.topicHasError=false;
+
+  }
+}
 
 onSubmit(userForm){
   console.log("vbsdk");
